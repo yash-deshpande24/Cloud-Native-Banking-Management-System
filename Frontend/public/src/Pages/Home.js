@@ -1,24 +1,40 @@
-```javascript id="pc4vjy"
 import React from "react";
+
+import backgroundImage from "../images/banking-bg.jpg";
 
 function Home() {
 
   return (
 
-    <div>
-
-      <h1>
-        Welcome to Cloud Native Banking Management System
-      </h1>
-
-      <p>
-        Secure Banking Platform using React.js and Node.js
-      </p>
+    <div style={styles.container}>
 
     </div>
 
   );
 }
 
+const styles = {
+
+  container: {
+
+    backgroundImage: `url(${backgroundImage})`,
+
+    backgroundSize: "cover",
+
+    backgroundPosition: "center",
+
+    backgroundRepeat: "no-repeat",
+
+    height: "90vh",
+
+    width: "99%",
+
+    margin: "0",
+
+    padding: "0"
+
+  }
+
+};
+
 export default Home;
-```
