@@ -1,6 +1,8 @@
-```javascript
 import React from "react";
+
 import { Link } from "react-router-dom";
+
+import logo from "../images/logo.png";
 
 function Navbar() {
 
@@ -8,7 +10,19 @@ function Navbar() {
 
     <nav style={styles.nav}>
 
-      <h2>Banking App</h2>
+      <div style={styles.logoContainer}>
+
+        <img
+          src={logo}
+          alt="logo"
+          style={styles.logo}
+        />
+
+        <h2 style={styles.title}>
+          Banking App
+        </h2>
+
+      </div>
 
       <div>
 
@@ -38,20 +52,61 @@ function Navbar() {
 const styles = {
 
   nav: {
+
     display: "flex",
+
     justifyContent: "space-between",
-    padding: "15px",
-    background: "#222",
+
+    alignItems: "center",
+
+    padding: "15px 30px",
+
+    background: "#111",
+
     color: "#fff"
+
+  },
+
+  logoContainer: {
+
+    display: "flex",
+
+    alignItems: "center"
+
+  },
+
+  logo: {
+
+    width: "45px",
+
+    height: "45px",
+
+    marginRight: "12px",
+
+    borderRadius: "50%"
+
+  },
+
+  title: {
+
+    fontSize: "32px"
+
   },
 
   link: {
-    marginRight: "15px",
+
+    marginRight: "20px",
+
     color: "#fff",
-    textDecoration: "none"
+
+    textDecoration: "none",
+
+    fontSize: "18px",
+
+    fontWeight: "bold"
+
   }
 
 };
 
 export default Navbar;
-```
