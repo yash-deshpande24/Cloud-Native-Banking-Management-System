@@ -1,4 +1,3 @@
-```gitignore id="x5pk4m"
 # Terraform
 
 .terraform/
@@ -26,4 +25,3 @@ node_modules/
 dist/
 
 build/
-```
