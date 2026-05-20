@@ -1,11 +1,65 @@
-```javascript id="kylq9o"
-import axios from "axios";
+import React from "react";
 
-const API = axios.create({
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
-  baseURL: "http://localhost:5000/api"
+import Navbar from "./components/Navbar";
 
-});
+import Home from "./pages/Home";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Dashboard from "./components/Dashboard";
+import Transactions from "./components/Transactions";
+import Account from "./pages/Account";
 
-export default API;
-```
+function App() {
+
+  return (
+
+    <BrowserRouter>
+
+      <Navbar />
+
+      <Routes>
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
+
+        <Route
+          path="/login"
+          element={<Login />}
+        />
+
+        <Route
+          path="/register"
+          element={<Register />}
+        />
+
+        <Route
+          path="/dashboard"
+          element={<Dashboard />}
+        />
+
+        <Route
+          path="/transactions"
+          element={<Transactions />}
+        />
+
+        <Route
+          path="/account"
+          element={<Account />}
+        />
+
+      </Routes>
+
+    </BrowserRouter>
+
+  );
+}
+
+export default App;
