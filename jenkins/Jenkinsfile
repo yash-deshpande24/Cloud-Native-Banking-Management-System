@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                sh 'docker build -t banking-app .'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh 'docker run --rm banking-app pytest tests/'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to AWS...'
+                // Add AWS deployment commands here
+            }
+        }
+    }
+}
