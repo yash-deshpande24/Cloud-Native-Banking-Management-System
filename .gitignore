@@ -1,0 +1,29 @@
+```gitignore id="x5pk4m"
+# Terraform
+
+.terraform/
+
+*.tfstate
+
+*.tfstate.backup
+
+.terraform.lock.hcl
+
+# Node Modules
+
+node_modules/
+
+# Environment Files
+
+.env
+
+# Logs
+
+*.log
+
+# Build Files
+
+dist/
+
+build/
+```
