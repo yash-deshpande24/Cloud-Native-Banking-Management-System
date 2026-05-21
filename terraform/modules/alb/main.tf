@@ -1,6 +1,6 @@
 resource "aws_security_group" "alb_sg" {
 
-    name = "banking-alb-sg-new"
+    name = "banking-alb-v2"
 
     description = "ALB Security Group"
 
@@ -34,7 +34,7 @@ egress {
 
 resource "aws_lb" "banking_alb" {
 
-    name = "banking-alb"
+    name = "banking-alb-v2"
 
     internal = false
 

@@ -47,7 +47,7 @@ module "iam" {
 
   source = "./modules/iam"
 
-  user_name = "banking-user"
+  user_name = "banking-user-v2"
 
 }
 
@@ -55,7 +55,7 @@ module "cloudwatch" {
 
   source = "./modules/cloudwatch"
 
-  log_group_name = "banking-log-group"
+  log_group_name = "banking-log-group-v2"
 
 }
 
