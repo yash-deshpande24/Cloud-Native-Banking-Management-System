@@ -8,26 +8,19 @@ module "vpc" {
 
 }
 
-resource "aws_instance" "banking_ec2" {
+module "ec2" {
 
-  ami = var.ami_id
+  source = "./modules/ec2"
 
-  instance_type = "t2.micro"
+  ami_id = var.ami_id
 
-  subnet_id = var.subnet_id
+  instance_type = var.instance_type
+
+  subnet_id = module.vpc.public_subnet_1_id
 
   key_name = var.key_name
 
-  associate_public_ip_address = true
-
-  tags = {
-
-    Name = "banking-ec2"
-
-  }
-
 }
-
 
 
 module "rds" {

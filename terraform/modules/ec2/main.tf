@@ -2,7 +2,7 @@ resource "aws_instance" "banking_ec2" {
 
   ami = var.ami_id
 
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   subnet_id = var.subnet_id
 
@@ -17,3 +17,4 @@ resource "aws_instance" "banking_ec2" {
   }
 
 }
+
