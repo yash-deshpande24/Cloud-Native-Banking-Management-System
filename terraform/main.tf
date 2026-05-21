@@ -8,32 +8,27 @@ module "vpc" {
 
 }
 
-module "ec2" {
+resource "aws_instance" "banking_ec2" {
 
-  source = "./modules/ec2"
+  ami = var.ami_id
 
-  ami_id = var.ami_id
+  instance_type = "t2.micro"
 
-  instance_type = var.instance_type
-
-  subnet_id = module.vpc.public_subnet_1_id
+  subnet_id = var.subnet_id
 
   key_name = var.key_name
 
-  security_group_ids = [
+  associate_public_ip_address = true
 
-    module.security_groups.ec2_sg_id
-  ]
+  tags = {
 
-}
+    Name = "banking-ec2"
 
-module "security_groups" {
-
-  source = "./modules/security-groups"
-
-  vpc_id = module.vpc.vpc_id
+  }
 
 }
+
+
 
 module "rds" {
 
@@ -114,7 +109,9 @@ module "autoscaling" {
 # aws dynamodb create-table  --table-name terraform-lock  --attribute-definitions AttributeName=LockID,AttributeType=S  --key-schema AttributeName=LockID,KeyType=HASH  --billing-mode PAY_PER_REQUEST  --region us-east-1
 
 // terrform init
+// terraform fmt
 // terraform validate
 // terraform plan
 // terraform apply
 // terraform destroy --auto-approve
+// terraform force-unlock d490ff55-cf8c-4716-2540-f0728388bbde

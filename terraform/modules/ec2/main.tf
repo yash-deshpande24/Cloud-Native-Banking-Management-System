@@ -1,14 +1,14 @@
 resource "aws_instance" "banking_ec2" {
 
-  ami           = var.ami_id
+  ami = var.ami_id
 
-  instance_type = var.instance_type
+  instance_type = "t2.micro"
 
-  subnet_id     = var.subnet_id
+  subnet_id = var.subnet_id
 
-  key_name      = var.key_name
+  key_name = var.key_name
 
-  vpc_security_group_ids = var.security_group_ids
+  associate_public_ip_address = true
 
   tags = {
 
