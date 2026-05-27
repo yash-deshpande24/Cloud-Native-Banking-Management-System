@@ -16,6 +16,28 @@ A Full Stack Cloud Native Banking Management System built using:
 
 ---
 
+screenshort
+
+<img width="825" height="666" alt="image" src="https://github.com/user-attachments/assets/8276ca85-3f5b-4b56-81fd-c586183362f9" />
+
+1.Navbar.js
+<img width="884" height="257" alt="image" src="https://github.com/user-attachments/assets/e4d242a6-cbcb-4ba5-94ae-9d6210ecc4a4" />
+
+2.login.js
+<img width="836" height="455" alt="image" src="https://github.com/user-attachments/assets/b9b8e494-aeec-4398-bc0e-b7d5abb38326" />
+
+3.Register.js
+<img width="844" height="448" alt="image" src="https://github.com/user-attachments/assets/23dccf3e-45fa-4ea9-94a8-aa173d5f729d" />
+
+4. Dashboard.js
+<img width="852" height="530" alt="image" src="https://github.com/user-attachments/assets/d1c8ae14-7d6b-4c4d-bde3-24e27c8d1460" />
+
+5. Transactions.js
+<img width="804" height="494" alt="image" src="https://github.com/user-attachments/assets/f68f3c10-ac14-4dc1-8a32-2c5ef37f2ac6" />
+
+<img width="226" height="599" alt="image" src="https://github.com/user-attachments/assets/91e4bb53-a311-4255-a996-1bce17185017" />
+
+---
 # Project Architecture
 
 Frontend → React.js  
